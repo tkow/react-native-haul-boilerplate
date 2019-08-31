@@ -7,17 +7,51 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-firebase/app": "^0.3.0",
+    "@react-native-firebase/auth": "^0.3.0",
+    "@react-native-firebase/crashlytics": "^0.3.0",
+    "@react-native-firebase/database": "^0.3.0",
+    "@react-native-firebase/firestore": "^0.3.0",
+    "@react-native-firebase/functions": "^0.3.0",
+    "@react-native-firebase/storage": "^0.3.0",
     "react": "16.8.6",
-    "react-native": "0.60.5"
+    "react-native": "0.60.5",
+    "react-native-localize": "^1.1.4",
+    "react-navigation": "^3.12.1",
+    "redux": "^4.0.4",
+    "redux-actions": "^2.6.5",
+    "redux-saga": "^1.0.5",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
     "@babel/runtime": "^7.5.0",
+    "@haul-bundler/babel-preset-react-native": "^0.11.0",
+    "@haul-bundler/cli": "^0.11.0",
+    "@haul-bundler/inspector": "^0.11.0",
+    "@haul-bundler/preset-0.60": "^0.11.0",
     "@react-native-community/eslint-config": "^0.0.3",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/addon-notes": "^5.1.10",
+    "@storybook/addon-viewport": "^5.1.9",
+    "@storybook/react": "^5.1.9",
     "babel-jest": "^24.1.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "dependency-cruiser": "^5.1.0",
+    "detox": "^14.0.3",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "eslint-plugin-react-native": "^3.7.0",
     "jest": "^24.1.0",
     "metro-react-native-babel-preset": "0.54.1",
-    "react-test-renderer": "16.8.6"
+    "react-native-web": "0.10",
+    "react-test-renderer": "16.8.6",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.6.2"
   },
   "jest": {
     "preset": "react-native"

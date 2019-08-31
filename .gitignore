@@ -21,6 +21,8 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+Pods
+WorkspaceSettings.xcsettings
 
 # Android/IntelliJ
 #
@@ -29,6 +31,7 @@ build/
 .gradle
 local.properties
 *.iml
+android/.settings/org.eclipse.buildship.core.prefs
 
 # node.js
 #
@@ -39,7 +42,7 @@ yarn-error.log
 # BUCK
 buck-out/
 \.buckd/
-*.keystore
+release.keystore
 
 # fastlane
 #
@@ -51,9 +54,67 @@ buck-out/
 */fastlane/report.xml
 */fastlane/Preview.html
 */fastlane/screenshots
+.bundle/
+vendor/
+
+# google
+
+# jest
+coverage
+
+# Haul
+#
+haul-debug.log
 
 # Bundle artifact
 *.jsbundle
+*.js.map
 
-# CocoaPods
-/ios/Pods/
+# env
+\.env*
+
+# vscode
+.vs
+
+# app-center
+
+# log
+*.log
+
+# dependencygraph.svg
+dependencygraph.svg
+
+
+# fastlane specific
+fastlane/report.xml
+
+# deliver temporary files
+fastlane/Preview.html
+
+# snapshot generated screenshots
+fastlane/screenshots
+
+# scan temporary files
+fastlane/test_output
+
+*.dSYM.zip
+
+
+# EnvironmentFirebase　
+
+.jest
+
+# cert
+*.p12
+*.pem
+*.pkey
+*.jks
+
+report.*.json
+*.hprof
+*.bundle
+*.bundle.map
+upload-keystore.properties
+android/app/release
+*.pepk
+*.service-account.json

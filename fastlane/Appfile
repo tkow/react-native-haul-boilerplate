@@ -1,0 +1,15 @@
+app_identifier "d" # The bundle identifier of your app
+apple_id "d" # Your Apple email address
+
+team_id "d"  # Developer Portal Team ID
+json_key_file "./fastlane/d"
+
+for_platform :ios do
+  app_identifier "d"
+  for_lane :release do
+    app_identifier "d"
+  end
+  for_lane :beta do
+    app_identifier "d"
+  end
+end

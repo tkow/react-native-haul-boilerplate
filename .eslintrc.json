@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": ["@typescript-eslint","react", "react-hooks", "react-native"],
+  "parser": "@typescript-eslint/parser",
+  "env": { "browser": true, "node": true, "es6": true, "react-native/react-native": true },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "useJSXTextNode": true,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/no-object-literal-type-assertion": [0, {"allow-arguments": 0}],
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": 1,
+    "react/react-in-jsx-scope": 0
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts", ".tsx"]
+      }
+    }
+  }
+}

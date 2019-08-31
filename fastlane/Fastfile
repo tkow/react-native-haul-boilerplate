@@ -1,0 +1,155 @@
+fastlane_version '2.118.1'
+default_platform :ios
+
+before_all do |lane|
+  ensure_git_branch(branch: '(develop|release|\d{0,4}\.\d{0,4}\.\d{0,4})')
+  ensure_git_status_clean
+  git_pull
+  if lane == :release or lane == :beta
+    ENV["ENV"] = 'production'
+  elsif lane == :appcenter
+    ENV["ENV"] = 'staging'
+  else
+    ENV["ENV"] = 'development'
+  end
+end
+
+platform :ios do
+  # lane :inc_test do |options|
+  #   bump_type =  options[:bump_type] || 'patch' || 'minor' || 'major'
+  #   increment_version_number(bump_type: bump_type, xcodeproj: './ios/undecided.xcodeproj')
+  # end
+   # iOS Lanes
+  desc 'Fetch certificates and provisioning profiles'
+  lane :certificates do |options|
+    if ENV["ENV"] == 'production'
+      match(app_identifier: 'jp.undecided.app', type: 'appstore', readonly: true)
+    elsif ENV["ENV"] == 'staging'
+      match(app_identifier: 'jp.undecided.staging.app', type: 'adhoc',)
+    else
+      match(app_identifier: 'jp.undecided.app', type: 'development')
+    end
+  end
+
+  desc 'Build each Scheme'
+  lane :build do |options|
+    unless options[:no_version_up]
+      if options[:version]
+        increment_version_number(
+          version_number: options[:version],
+          xcodeproj: './ios/undecided.xcodeproj'
+        )
+      else
+        bump_type =  options[:bump_type] || 'patch'
+        increment_version_number(bump_type: bump_type, xcodeproj: './ios/undecided.xcodeproj')
+      end
+    end
+    Dir.chdir("../") do
+      # code here runs in the parent directory
+      sh('./appcenter-pre-build.sh')
+    end
+    cocoapods(
+      podfile: "./ios/Podfile"
+    )
+    certificates
+    increment_build_number(xcodeproj: './ios/undecided.xcodeproj')
+    if ENV["ENV"] == 'production'
+      gym(scheme:'undecided-production', workspace:'./ios/undecided.xcworkspace')
+    elsif ENV["ENV"] == 'staging'
+      gym(scheme:'undecided-staging', workspace:'./ios/undecided.xcworkspace')
+    else
+      gym(scheme:'undecided-development', workspace:'./ios/undecided.xcworkspace')
+    end
+  end
+
+  desc 'deploy to TestFlight'
+  lane :beta do |options|
+    build(options)
+    pilot
+    commit_version_bump(message: 'success test flight commit', xcodeproj: './ios/undecided.xcodeproj')
+    version = get_version_number(
+      xcodeproj: './ios/undecided.xcodeproj',
+      target: 'undecided'
+    )
+    add_git_tag(
+      prefix: 'ios-v',
+      tag: version.to_s,
+      force: true
+    )
+    push_to_git_remote(
+      remote: 'upstream',
+      remote_branch: version.to_s,
+      force: true
+    )
+  end
+
+  desc 'deploy to app store connect'
+  lane :release do |options|
+    build(options)
+    deliver
+    commit_version_bump(message: 'release commit', xcodeproj: './ios/undecided.xcodeproj')
+    version = get_version_number(
+      xcodeproj: './ios/undecided.xcodeproj',
+      target: 'undecided'
+    )
+    add_git_tag(
+      prefix: 'ios-v',
+      tag: version.to_s,
+      force: true
+    )
+    push_to_git_remote(
+      remote: 'upstream',
+      remote_branch: version.to_s,
+      force: true
+    )
+  end
+end
+
+platform :android do
+  # Android Lanes
+  desc "Deploy a new version to the Google Play"
+  lane :release do |options|
+    gradle(task: 'clean', project_dir: 'android/')
+    increment_version(options)
+    gradle(task: 'bundle', build_type: 'Release', project_dir: 'android/')
+    supply(package_name: 'jp.undecided.app',track: 'beta', track_promote_to: 'beta', skip_upload_apk: true)
+    git_commit(path: './android/*', message: "upload aab google play")
+    add_git_tag(
+      prefix: 'android-v',
+      tag: git_branch,
+      force: true
+    )
+    push_to_git_remote(
+      remote: 'upstream',
+      remote_branch: git_branch,
+      force: true
+    )
+  end
+
+  desc "version increment"
+  lane :increment_version do |options|
+    # bump_type: major,minor,patch
+    gradle(task: 'incrementVersion', properties: { version_number: options[:version_number], bump_type: options[:bump_type] }, project_dir: 'android/')
+  end
+
+end
+
+after_all do |lane|
+  slack(
+    success: true,
+    channel: 'fastlane',
+    message: "#{lane} has suceeded."
+  )
+end
+
+error do |lane, exception, options|
+  if options[:debug]
+    puts "Hi :)"
+  else
+    slack(
+      success: false,
+      channel: 'fastlane',
+      message: "#{lane}:#{exception.to_s} :\n#{exception.backtrace}"
+    )
+  end
+end
