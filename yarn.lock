@@ -1444,10 +1444,10 @@
     "@hapi/bourne" "1.x.x"
     "@hapi/hoek" "8.x.x"
 
-"@haul-bundler/babel-preset-react-native@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@haul-bundler/babel-preset-react-native/-/babel-preset-react-native-0.11.0.tgz#ba8472908030360114927d2ea375a79eb67be0e7"
-  integrity sha512-rxl8qc7lNVZpcVexkUXxAlmqrbtmnn1EDDUOYd/I/Bs5YQS7kJWx4PUfEERKtaVv6Uae8u/a6sgcxdERo3oRuA==
+"@haul-bundler/babel-preset-react-native@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@haul-bundler/babel-preset-react-native/-/babel-preset-react-native-0.12.0.tgz#fd9efd38c4b6385caebacb1f9f64010b012cb172"
+  integrity sha512-bL6tH+P+U73HLtZIAvh2dVo1n01OW0G881zCQbRWt953GbfNlNPZ6Q1Ddjvcf8T0q3UnNemZKZL5Ibo1ZDH5sw==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.4.4"
     "@babel/plugin-proposal-export-default-from" "^7.2.0"
@@ -1473,21 +1473,21 @@
     "@babel/template" "^7.4.4"
     metro-react-native-babel-preset "^0.54.0"
 
-"@haul-bundler/basic-bundle-webpack-plugin@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@haul-bundler/basic-bundle-webpack-plugin/-/basic-bundle-webpack-plugin-0.11.0.tgz#af37f4c500507d8507981d1a1d7cf58d4ac67bbd"
-  integrity sha512-SGo4sU2a4PkM92KrAoPMR7hQheNr8ecrRtzmYYWPmPXex33faq3HZI4j0Gr1HONkmhWSrg3E9kjLhWtx/yJtMw==
+"@haul-bundler/basic-bundle-webpack-plugin@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@haul-bundler/basic-bundle-webpack-plugin/-/basic-bundle-webpack-plugin-0.12.0.tgz#29a7f958389526d51afb7287af974962ccfcbf92"
+  integrity sha512-5+qSSk/iT8anWO4KSdZngSqbj1jxfq64uyX35eBcAVUG2at5Ob3ZUPlyrQYDIE8fiLBa097xNHqol/lCiA0LDQ==
   dependencies:
     concat-with-sourcemaps "^1.1.0"
 
-"@haul-bundler/cli@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@haul-bundler/cli/-/cli-0.11.0.tgz#114b3e4361f20e42ecf9c6dc6b6bc5e8fcf08c58"
-  integrity sha512-gEkNWeH4GvFuvg9NByBHQ6JzoPmpwftWGB2pXWFMXO09/9HlTP+z8nWVEYMpvQ50A2fbSEbnAvUJnX3s4dI9vA==
+"@haul-bundler/cli@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@haul-bundler/cli/-/cli-0.12.0.tgz#6a0c9da77c6cf8db7acf56095a32f35cfe0bc07c"
+  integrity sha512-+66pq2sG5ytWnLmHme3VKQR3ENbYMdp887+yD4LHMMneiDA1NEB8fVu1vhgVx4Pl9sgsB+0RBIV21ieK5VTESw==
   dependencies:
-    "@haul-bundler/core" "^0.11.0"
-    "@haul-bundler/core-legacy" "^0.11.0"
-    "@haul-bundler/inspector-events" "^0.11.0"
+    "@haul-bundler/core" "^0.12.0"
+    "@haul-bundler/core-legacy" "^0.12.0"
+    "@haul-bundler/inspector-events" "^0.12.0"
     ansi-fragments "^0.2.1"
     dedent "^0.7.0"
     execa "^2.0.3"
@@ -1499,20 +1499,20 @@
     yargs "^13.3.0"
     yargs-parser "^13.1.1"
 
-"@haul-bundler/core-legacy@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@haul-bundler/core-legacy/-/core-legacy-0.11.0.tgz#ce8a568e462ceaaf58ee98879aff587b40976cd5"
-  integrity sha512-L/KrFdI2KPKruFW/WOn7L+hbcw3P3ymhx0w1QllnNV1lI/6YNcRuR/Mor0qkcLKWDyUKh9cdAiWKd0lqLyViOg==
+"@haul-bundler/core-legacy@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@haul-bundler/core-legacy/-/core-legacy-0.12.0.tgz#95707634912b32dd2777717829ae3d216ce97e43"
+  integrity sha512-Clcx3CD+M9kZh98MjzBOjq8+p93dNOrQxhk+eD+aIROnIb+lXMTvnb5f8w7sd7kDPkCohBkicnMjUURY5ol4OA==
   dependencies:
     mime-types "^2.1.24"
     mkdirp "^0.5.1"
     ws "^6.2.1"
     xpipe "^1.0.5"
 
-"@haul-bundler/core@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@haul-bundler/core/-/core-0.11.0.tgz#7e6efda52d0ec5ac6f8d751ad562b396c2ac01dc"
-  integrity sha512-7YwrbVFI17CrqwGkGhWWbjW3ySNS0qt1R7DPba0gikhmgNWXkdd3H9UMlQSGq61dscG/roALtkt+daMOUBlpNA==
+"@haul-bundler/core@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@haul-bundler/core/-/core-0.12.0.tgz#724e850bb423e75b0dbf335070404aad76e76db9"
+  integrity sha512-cj3nEcVsEJLcmDm1o3Ld3/r3SvixudTUDYyVYnYSvOguTSKgAxib2EVr03RIHu5KNtV5Do7QLPEQUdMwjn0KJA==
   dependencies:
     "@babel/core" "7.4.3"
     "@babel/plugin-proposal-class-properties" "7.4.0"
@@ -1523,10 +1523,10 @@
     "@hapi/hapi" "^18.3.1"
     "@hapi/inert" "^5.2.1"
     "@hapi/joi" "^15.1.0"
-    "@haul-bundler/basic-bundle-webpack-plugin" "^0.11.0"
-    "@haul-bundler/core-legacy" "^0.11.0"
-    "@haul-bundler/inspector-events" "^0.11.0"
-    "@haul-bundler/ram-bundle-webpack-plugin" "^0.11.0"
+    "@haul-bundler/basic-bundle-webpack-plugin" "^0.12.0"
+    "@haul-bundler/core-legacy" "^0.12.0"
+    "@haul-bundler/inspector-events" "^0.12.0"
+    "@haul-bundler/ram-bundle-webpack-plugin" "^0.12.0"
     ansi-fragments "^0.2.1"
     dedent "^0.7.0"
     escape-string-regexp "^2.0.0"
@@ -1543,41 +1543,43 @@
     resolve "^1.12.0"
     semver "^6.3.0"
     source-map "^0.7.3"
+    strip-ansi "5.2.0"
     terminal-kit "^1.30.0"
     terser "^4.1.3"
     utility-types "^3.7.0"
     webpack "^4.39.1"
+    wrap-ansi "^6.0.0"
     ws "^6.2.1"
 
-"@haul-bundler/inspector-events@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@haul-bundler/inspector-events/-/inspector-events-0.11.0.tgz#f231e4a8a63ae79395b9f9dc3a5435325e070cdf"
-  integrity sha512-YBRz2EXGuu/xdPORDNdSLza8f26FHOor1PeikboPXzpx4bKWGeHl84F1OQWQ9ZZOgxs/w67I/movDlykSHGApw==
+"@haul-bundler/inspector-events@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@haul-bundler/inspector-events/-/inspector-events-0.12.0.tgz#9cc35c99a5ea042e975da60714f438556e19ef21"
+  integrity sha512-U/v9OLRQyn+fxRXwtqwsS7Z+LlVqU4I0sYAxyQ3rypC57pj64StWQB4HqxBH6sMUsQumannzipd4ohEL8E+nZg==
 
-"@haul-bundler/inspector@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@haul-bundler/inspector/-/inspector-0.11.0.tgz#a878f82d3eecd47952362f8f4b4dd669b65313f0"
-  integrity sha512-7hEE5PFWkdYpwY3O/XaO+uRGfVDiEDKS/dgQ3oEsMFxfg1NpH8Bp/UNZNroYe++H2LYhST8Ea37kaHpTK5pDZQ==
+"@haul-bundler/inspector@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@haul-bundler/inspector/-/inspector-0.12.0.tgz#946f45341bbe037606c26efd2e654be6f3c89aa6"
+  integrity sha512-6ORWu37WUaOMmq/WAi6KygBnEPxohaGo0TMx1vy8fsJmZnecJWYvNharcOnoCXoibtabC/6//rN+jGuPlzArNw==
   dependencies:
-    "@haul-bundler/inspector-events" "^0.11.0"
+    "@haul-bundler/inspector-events" "^0.12.0"
     ansi-fragments "^0.2.1"
     ws "^6.2.1"
     yargs "^13.3.0"
 
-"@haul-bundler/preset-0.60@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@haul-bundler/preset-0.60/-/preset-0.60-0.11.0.tgz#39dc958742cb319b130dc9ed90ae808461b24418"
-  integrity sha512-pnjeuYy9qTEt7OAMueKw1BJ531fx3iLHrcBqfQ1Mncbrv3rFd6I1AnJfTIEr4+6CHEcMiQLn+iJFU6tXWl0RkQ==
+"@haul-bundler/preset-0.60@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@haul-bundler/preset-0.60/-/preset-0.60-0.12.0.tgz#57696e04e69f6a36949d8bef6e164f9697218797"
+  integrity sha512-SXEBZmeACreCk5oC5VVPCfN5HC3TskfERsfFyPBD49M/tSloKjhQnMelMmUbja/6UGZfEB+xhDvA9oc3g6iCXQ==
   dependencies:
     babel-loader "^8.0.6"
     case-sensitive-paths-webpack-plugin "^2.2.0"
     is-ci "^2.0.0"
     terser-webpack-plugin "^1.4.1"
 
-"@haul-bundler/ram-bundle-webpack-plugin@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@haul-bundler/ram-bundle-webpack-plugin/-/ram-bundle-webpack-plugin-0.11.0.tgz#73cdcef26602fcbf6088bcd83dba3c66ea16ce2f"
-  integrity sha512-rGv2/aSEOTQyY+V4uEYn/DnLpq4vxa/dk2wIxtKbCP36bBVAQMaP8yeJ4eYfkQEU41lgoSsZ1nNvkILrwFcZYA==
+"@haul-bundler/ram-bundle-webpack-plugin@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@haul-bundler/ram-bundle-webpack-plugin/-/ram-bundle-webpack-plugin-0.12.0.tgz#56b60da45de6d8f0675ad6e178667e26a7247757"
+  integrity sha512-7tNCg0LVG74PRUAVdFRLHT93MmLUtkCoRPWjKZQYvKr3L0JxGLQyQeXoO2bexOjt5Nqz5soq1K8ncWE9v8T4xg==
 
 "@icons/material@^0.2.4":
   version "0.2.4"
@@ -8582,6 +8584,47 @@ metro-react-native-babel-preset@0.54.1, metro-react-native-babel-preset@^0.54.0:
     metro-babel7-plugin-react-transform "0.54.1"
     react-transform-hmr "^1.0.4"
 
+metro-react-native-babel-preset@^0.56.0:
+  version "0.56.0"
+  resolved "https://registry.yarnpkg.com/metro-react-native-babel-preset/-/metro-react-native-babel-preset-0.56.0.tgz#fa47dfd5f7678e89cffd1249020b8add6938fc48"
+  integrity sha512-MAo1fm0dNn6MVZmylaz6k2HC1MINHLTLfE7O3a9Xz3fAtbGbApisp06rBUfK5uUqIJDmAaKgbiT34lHJSIiE6Q==
+  dependencies:
+    "@babel/plugin-proposal-class-properties" "^7.0.0"
+    "@babel/plugin-proposal-export-default-from" "^7.0.0"
+    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.0.0"
+    "@babel/plugin-proposal-object-rest-spread" "^7.0.0"
+    "@babel/plugin-proposal-optional-catch-binding" "^7.0.0"
+    "@babel/plugin-proposal-optional-chaining" "^7.0.0"
+    "@babel/plugin-syntax-dynamic-import" "^7.0.0"
+    "@babel/plugin-syntax-export-default-from" "^7.0.0"
+    "@babel/plugin-syntax-flow" "^7.2.0"
+    "@babel/plugin-transform-arrow-functions" "^7.0.0"
+    "@babel/plugin-transform-block-scoping" "^7.0.0"
+    "@babel/plugin-transform-classes" "^7.0.0"
+    "@babel/plugin-transform-computed-properties" "^7.0.0"
+    "@babel/plugin-transform-destructuring" "^7.0.0"
+    "@babel/plugin-transform-exponentiation-operator" "^7.0.0"
+    "@babel/plugin-transform-flow-strip-types" "^7.0.0"
+    "@babel/plugin-transform-for-of" "^7.0.0"
+    "@babel/plugin-transform-function-name" "^7.0.0"
+    "@babel/plugin-transform-literals" "^7.0.0"
+    "@babel/plugin-transform-modules-commonjs" "^7.0.0"
+    "@babel/plugin-transform-object-assign" "^7.0.0"
+    "@babel/plugin-transform-parameters" "^7.0.0"
+    "@babel/plugin-transform-react-display-name" "^7.0.0"
+    "@babel/plugin-transform-react-jsx" "^7.0.0"
+    "@babel/plugin-transform-react-jsx-source" "^7.0.0"
+    "@babel/plugin-transform-regenerator" "^7.0.0"
+    "@babel/plugin-transform-runtime" "^7.0.0"
+    "@babel/plugin-transform-shorthand-properties" "^7.0.0"
+    "@babel/plugin-transform-spread" "^7.0.0"
+    "@babel/plugin-transform-sticky-regex" "^7.0.0"
+    "@babel/plugin-transform-template-literals" "^7.0.0"
+    "@babel/plugin-transform-typescript" "^7.0.0"
+    "@babel/plugin-transform-unicode-regex" "^7.0.0"
+    "@babel/template" "^7.0.0"
+    react-refresh "^0.4.0"
+
 metro-react-native-babel-transformer@0.54.1, metro-react-native-babel-transformer@^0.54.1:
   version "0.54.1"
   resolved "https://registry.yarnpkg.com/metro-react-native-babel-transformer/-/metro-react-native-babel-transformer-0.54.1.tgz#45b56db004421134e10e739f69e8de50775fef17"
@@ -10562,6 +10605,11 @@ react-proxy@^1.1.7:
   dependencies:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
+
+react-refresh@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.4.0.tgz#d421f9bd65e0e4b9822a399f14ac56bda9c92292"
+  integrity sha512-bacjSio8GOtzNZKZZM6EWqbhlbb6pr28JWJWFTLwEBKvPIBRo6/Ob68D2EWZA2VyTdQxAh+TRnCYOPNKsQiXTA==
 
 react-resize-detector@^4.0.5:
   version "4.2.0"
@@ -12816,6 +12864,13 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
+webpack-merge@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.2.2.tgz#a27c52ea783d1398afd2087f547d7b9d2f43634d"
+  integrity sha512-TUE1UGoTX2Cd42j3krGYqObZbOD+xF7u28WB7tfUordytSjbWTIjK/8V0amkBfTYN4/pB/GIDlJZZ657BGG19g==
+  dependencies:
+    lodash "^4.17.15"
+
 webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.4.3.tgz#eedd8ec0b928fbf1cbfe994e22d2d890f330a933"
@@ -12957,7 +13012,7 @@ worker-rpc@^0.1.0:
   dependencies:
     microevent.ts "~0.1.1"
 
-wrap-ansi@6.0.0:
+wrap-ansi@6.0.0, wrap-ansi@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-6.0.0.tgz#47c7b7329e0b8000f5756b0693a861e357e4043e"
   integrity sha512-8YwLklVkHe4QNpGFrK6Mxm+BaMY7da6C9GlDED3xs3XwThyJHSbVwg9qC4s1N8tBFcnM1S0s8I390RC6SgGe+g==
