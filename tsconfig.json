@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "target": "es2015",
+    "moduleResolution": "node",
+    "noImplicitThis": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./app",
+    "skipLibCheck": true,
+    "lib": ["es2015"],
+    "paths": {
+      "~": ["./"],
+      "~/*": ["./*", "./*.native", "./*.ios", "./*.android"],
+      "native-base-theme": ["../native-base-theme"],
+      "native-base-theme/*": ["../native-base-theme/*"]
+    },
+  },
+  "include": ["./src", ],
+  "exclude": [
+    "src/assets",
+    "native-base-theme",
+    "**/node_modules",
+    "__tests__",
+    "**/__tests__",
+    "__mocks__",
+    "tasks",
+    "**/*.web.tsx",
+    "**/*.web.ts"
+  ]
+}

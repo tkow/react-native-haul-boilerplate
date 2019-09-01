@@ -8,45 +8,44 @@ var detoxExtension = detoxFlg ? ['.mock.behaviour.js'] : [];
 const webpackConfig = ({ config, env }) => {
   const { platform } = env;
   const addConfig = {
-    module: {
-      rules: [
-        {
-          test: /\.jsx?$/,
-          include: [
-            path.join(__dirname, 'app/'),
-          ],
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['module:metro-react-native-babel-preset']
-            }
-          }
-        },
-        {
-          test: /\.tsx?$/,
-          include: [
-            path.join(__dirname, 'app/'),
-            path.join(__dirname, 'vender/ts_modules')
-          ],
-          use: [
-            {
-              loader: 'babel-loader',
-              options: {
-                presets: ['module:metro-react-native-babel-preset']
-              }
-            },
-            {
-              loader: 'ts-loader'
-            }
-          ]
-        }
-      ]
-    },
+    // module: {
+    //   rules: [
+    //     {
+    //       test: /\.jsx?$/,
+    //       include: [
+    //         path.join(__dirname, 'app/'),
+    //       ],
+    //       use: {
+    //         loader: 'babel-loader',
+    //         options: {
+    //           presets: ['module:metro-react-native-babel-preset']
+    //         }
+    //       }
+    //     },
+    //     {
+    //       test: /\.tsx?$/,
+    //       include: [
+    //         path.join(__dirname, 'app/'),
+    //         path.join(__dirname, 'vender/ts_modules')
+    //       ],
+    //       use: [
+    //         {
+    //           loader: 'babel-loader',
+    //           options: {
+    //             presets: ['module:metro-react-native-babel-preset']
+    //           }
+    //         },
+    //         {
+    //           loader: 'ts-loader'
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // },
     resolve: {
       alias: {
         '~': path.join(__dirname, 'src/')
       },
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
       extensions: [
         `.${platform}.tsx`,
         `.${platform}.ts`,
@@ -61,8 +60,6 @@ const webpackConfig = ({ config, env }) => {
         '.ts',
         '.jsx',
         '.js',
-        '.yml',
-        '.yaml'
       ]
     }
   };
