@@ -63,17 +63,17 @@ const webpackConfig = ({ config, env }) => {
       ]
     }
   };
-  // smart(config,addConfig); 
+  smart(config,addConfig); 
   // config.resolve.extensions = config.resolve.extensions.concat(
   //   addConfig.resolve.extensions
   // );
-  config.resolve.alias = config.resolve.alias || {};
-  Object.keys(addConfig.resolve.alias).forEach(key => {
-    config.resolve.alias[key] = addConfig.resolve.alias[key];
-  });
-  config.resolve.modules = config.resolve.modules
-    ? config.resolve.modules.concat(addConfig.resolve.modules)
-    : addConfig.resolve.modules;
+  // config.resolve.alias = config.resolve.alias || {};
+  // Object.keys(addConfig.resolve.alias).forEach(key => {
+  //   config.resolve.alias[key] = addConfig.resolve.alias[key];
+  // });
+  // config.resolve.modules = config.resolve.modules
+  //   ? config.resolve.modules.concat(addConfig.resolve.modules)
+  //   : addConfig.resolve.modules;
   // config.module.rules = config.module.rules.concat(addConfig.module.rules);
   // config.resolveLoader = addConfig.resolveLoader;
 };
