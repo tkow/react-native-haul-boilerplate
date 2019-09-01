@@ -2,7 +2,7 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 
 function loadStories() {
-  const req = require.context('../app', true, /\.story\.tsx?$/);
+  const req = require.context('../src', true, /\.story\.tsx?$/);
   req.keys().forEach(story => req(story));
 }
 

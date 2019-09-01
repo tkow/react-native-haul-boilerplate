@@ -25,7 +25,8 @@ module.exports = ({ config, mode }) => {
   config.resolve = {
     ...config.resolve,
     alias: {
-      '~/': "../"
+      '~/': "../",
+      'react-native$': 'react-native-web'
     },
     extensions: [
       ...config.resolve.extensions,
@@ -51,18 +52,10 @@ module.exports = ({ config, mode }) => {
       '.js',
     ]
   }
-
-  
-  // // react-native を import している箇所を react-native-web に変換
-  const webpackConfig = haulConfig({ platform: 'storybook' });
-
-  webpackConfig.resolve.alias['react-native$'] = require.resolve(
-    'react-native-web'
-  );
-  webpackConfig.plugins = [
+  config.plugins = [
     new webpack.DefinePlugin({
       __DEV__: false
     })
   ];
-  return webpackMerge.smart(config, webpackConfig);
+  return config;
 };
