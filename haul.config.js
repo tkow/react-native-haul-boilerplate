@@ -5,7 +5,7 @@ import { smart } from 'webpack-merge'
 var detoxFlg = process.env.APP_ENV === 'detox_tests';
 var detoxExtension = detoxFlg ? ['.mock.behaviour.js'] : [];
 
-const webpackConfig = ({ config, env }) => {
+export const webpackConfig = ({ config, env }) => {
   const { platform } = env;
   const addConfig = {
     // module: {

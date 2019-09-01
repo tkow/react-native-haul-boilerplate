@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start",
-    "test": "jest"
+    "start": "haul start",
+    "test": "jest",
+    "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/static"
   },
   "dependencies": {
     "@react-native-firebase/app": "^0.3.0",
@@ -31,7 +32,7 @@
     "@haul-bundler/cli": "^0.12.0",
     "@haul-bundler/inspector": "^0.12.0",
     "@haul-bundler/preset-0.60": "^0.12.0",
-    "@react-native-community/eslint-config": "^0.0.3",
+    "@react-native-community/eslint-config": "^0.0.5",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/addon-notes": "^5.1.10",
@@ -47,7 +48,7 @@
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-react-hooks": "^1.6.1",
+    "eslint-plugin-react-hooks": "^2.0.1",
     "eslint-plugin-react-native": "^3.7.0",
     "jest": "^24.1.0",
     "react-native-web": "0.10",
