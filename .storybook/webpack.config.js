@@ -52,10 +52,10 @@ module.exports = ({ config, mode }) => {
       '.js',
     ]
   }
-  config.plugins = [
+  config.plugins.push(
     new webpack.DefinePlugin({
       __DEV__: false
     })
-  ];
+  );
   return config;
 };
