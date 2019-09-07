@@ -40,6 +40,8 @@
     "@storybook/addon-notes": "^5.1.10",
     "@storybook/addon-viewport": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@types/i18n-js": "^3.0.1",
+    "@types/lodash.memoize": "^4.1.6",
     "@types/react": "^16.9.2",
     "@types/react-native": "^0.60.9",
     "@types/storybook__addon-actions": "^3.4.3",
