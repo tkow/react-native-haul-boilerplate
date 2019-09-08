@@ -47,3 +47,9 @@ brew install applesimutils
 npx detox build; 
 npx detox text; 
 ```
+
+# storybook
+
+```shell
+yarn storybook; 
+```
