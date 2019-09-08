@@ -2,6 +2,7 @@
   "compilerOptions": {
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "target": "es2015",
     "moduleResolution": "node",
     "noImplicitThis": true,
@@ -16,18 +17,12 @@
     "paths": {
       "~": ["./"],
       "~/*": ["./*", "./*.native", "./*.ios", "./*.android"],
-      "native-base-theme": ["../native-base-theme"],
-      "native-base-theme/*": ["../native-base-theme/*"]
     },
   },
   "include": ["./src"],
   "exclude": [
     "src/assets",
-    "native-base-theme",
     "**/node_modules",
-    "__tests__",
-    "**/__tests__",
-    "__mocks__",
     "**/*.web.tsx",
     "**/*.web.ts"
   ]

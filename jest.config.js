@@ -31,10 +31,11 @@ module.exports = {
   ],
   "globals": {
     "ts-jest": {
-      "babelConfig": true
+      "babelConfig": true,
+      "tsConfig": "tsconfig.jest.json"
     }
   },
   "setupFiles": [
   ],
-  cacheDirectory: '.jest/cache',
+  "cacheDirectory": '.jest/cache',
 }
