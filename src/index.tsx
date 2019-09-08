@@ -23,13 +23,12 @@ export default class App extends React.Component {
     store.dispatch(END);
   }
   public render = () => (
-    // <Provider store={store}>
-    //   <PersistGate loading={null} persistor={persistor}>
-    //     {/* <Navigator /> */}
-    //     {<Example/>}
-    //   </PersistGate>
-    // </Provider>
-    <Example/>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Navigator />
+      </PersistGate>
+    </Provider>
+    // <Example/>
   );
   private _handleAppStateChange = async (appState: AppStateStatus) => {
     if (appState === 'active') {
