@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
+const path = require('path');
 
 module.exports = ({ config, mode }) => {
   config.module.rules.push({
@@ -25,7 +26,7 @@ module.exports = ({ config, mode }) => {
   config.resolve = {
     ...config.resolve,
     alias: {
-      '~/': "../",
+      '~/': path.join('../', 'app/'),
       'react-native$': 'react-native-web'
     },
     extensions: [

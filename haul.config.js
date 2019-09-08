@@ -63,7 +63,7 @@ export const webpackConfig = ({ config, env }) => {
       ]
     }
   };
-  smart(config,addConfig); 
+  return smart(config,addConfig); 
   // config.resolve.extensions = config.resolve.extensions.concat(
   //   addConfig.resolve.extensions
   // );
