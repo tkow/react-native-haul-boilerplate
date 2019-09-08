@@ -46,4 +46,4 @@ brew install applesimutils
 ```shell
 npx detox build; 
 npx detox text; 
-``
+```
