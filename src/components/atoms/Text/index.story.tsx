@@ -1,7 +1,8 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import styled from 'styled-components/native';
-import {Label} from './index';
+import {Label} from '~/components/atoms/Text/index';
+// import {Label} from './index';
 
 const View = styled.View`
   flex-direction: row;
