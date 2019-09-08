@@ -5,8 +5,7 @@ module.exports = {
   "verbose": true,
   "preset": "react-native",
   "moduleNameMapper": {
-    "^~/(redux.*firestore.*)$": "<rootDir>/app/$1.native",
-    "^~(.*)$": "<rootDir>/app$1",
+    "^~(.*)$": "<rootDir>/src$1",
   },
   "testMatch":null,
   "transform": {
@@ -14,7 +13,8 @@ module.exports = {
     "^.+\\.jsx?$": '<rootDir>/node_modules/react-native/jest/preprocessor.js',
   },
   "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-  "testPathIgnorePatterns": ["vender", "/node_modules/", "/react-native-i18n-ts/"],
+  "cacheDirectory": ".jest/cache",
+  "testPathIgnorePatterns": ["<rootDir>/e2e/", "<rootDir>/node_modules/"],
   "moduleFileExtensions": [
     ".native.ts",
     ".native.tsx",
