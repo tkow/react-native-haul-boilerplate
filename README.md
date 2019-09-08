@@ -1,6 +1,6 @@
 # Summary
 
-This repo make ReactNative project set up with haul and typescript and some handy libraries.
+This repo make ReactNative project set up with [haul](https://github.com/callstack/haul) and typescript and some handy libraries.
 
 - eslint
 - detox
