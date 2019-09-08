@@ -1,10 +1,10 @@
-// import dic from 'your dictonary path';
+import dic from './dic';
 import i18n from 'i18n-js';
 import * as RNLocalize from 'react-native-localize';
 import { I18nManager } from 'react-native';
 import memoize from 'lodash.memoize';
 
-const translationGetters = {
+const translationGetters: {[lang: string]:() => any} = {
   // lazy requires (metro bundler does not support symlinks)
   ja: () => dic.ja
 };
@@ -23,7 +23,7 @@ const setI18nConfig = () => {
     fallback;
 
   // clear translation cache
-  translate.cache.clear();
+  if(translate.cache.clear) translate.cache.clear();
   // update layout direction
   I18nManager.forceRTL(isRTL);
 

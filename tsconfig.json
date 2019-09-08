@@ -10,7 +10,7 @@
     "sourceMap": true,
     "removeComments": true,
     "resolveJsonModule": true,
-    "baseUrl": "./app",
+    "baseUrl": "./src",
     "skipLibCheck": true,
     "lib": ["es2015"],
     "paths": {
@@ -20,7 +20,7 @@
       "native-base-theme/*": ["../native-base-theme/*"]
     },
   },
-  "include": ["./src", ],
+  "include": ["./src", "./types"],
   "exclude": [
     "src/assets",
     "native-base-theme",
