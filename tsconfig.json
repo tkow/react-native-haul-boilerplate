@@ -20,7 +20,7 @@
       "native-base-theme/*": ["../native-base-theme/*"]
     },
   },
-  "include": ["./src", "./types"],
+  "include": ["./src"],
   "exclude": [
     "src/assets",
     "native-base-theme",
@@ -28,7 +28,6 @@
     "__tests__",
     "**/__tests__",
     "__mocks__",
-    "tasks",
     "**/*.web.tsx",
     "**/*.web.ts"
   ]

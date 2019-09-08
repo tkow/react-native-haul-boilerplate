@@ -13,7 +13,7 @@ export default class App extends React.Component {
   public componentDidMount() {
     AppState.addEventListener('change', this._handleAppStateChange);
     // analytics.initialize();
-    SplashScreen.hide();
+    // SplashScreen.hide();
     // store.dispatch(cloudMessaging.runNotification());
   }
   public componentWillUnmount() {
