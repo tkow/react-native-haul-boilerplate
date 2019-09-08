@@ -5,17 +5,12 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { END } from 'redux-saga';
 import Navigator from './navigation';
-import Example from './screens/Example';
-// import { actions as cloudMessaging } from '~/redux/CloudMessaging';
-// import * as analytics from './advertise';
 import { persistor, store } from './redux/store';
 
 export default class App extends React.Component {
   public componentDidMount() {
     AppState.addEventListener('change', this._handleAppStateChange);
-    // analytics.initialize();
     // SplashScreen.hide();
-    // store.dispatch(cloudMessaging.runNotification());
   }
   public componentWillUnmount() {
     AppState.removeEventListener('change', this._handleAppStateChange);
@@ -28,14 +23,9 @@ export default class App extends React.Component {
         <Navigator />
       </PersistGate>
     </Provider>
-    // <Example/>
   );
   private _handleAppStateChange = async (appState: AppStateStatus) => {
     if (appState === 'active') {
-      // const badgeNumber = await firebase.notifications().getBadge();
-      // if (badgeNumber > 0) {
-      //   firebase.notifications().setBadge(0);
-      // }
     }
   };
 }
