@@ -8,40 +8,6 @@ var detoxExtension = detoxFlg ? ['.mock.behaviour.js'] : [];
 export const webpackConfig = ({ config, env }) => {
   const { platform } = env;
   const addConfig = {
-    // module: {
-    //   rules: [
-    //     {
-    //       test: /\.jsx?$/,
-    //       include: [
-    //         path.join(__dirname, 'app/'),
-    //       ],
-    //       use: {
-    //         loader: 'babel-loader',
-    //         options: {
-    //           presets: ['module:metro-react-native-babel-preset']
-    //         }
-    //       }
-    //     },
-    //     {
-    //       test: /\.tsx?$/,
-    //       include: [
-    //         path.join(__dirname, 'app/'),
-    //         path.join(__dirname, 'vender/ts_modules')
-    //       ],
-    //       use: [
-    //         {
-    //           loader: 'babel-loader',
-    //           options: {
-    //             presets: ['module:metro-react-native-babel-preset']
-    //           }
-    //         },
-    //         {
-    //           loader: 'ts-loader'
-    //         }
-    //       ]
-    //     }
-    //   ]
-    // },
     resolve: {
       alias: {
         '~': path.join(__dirname, 'src/')
@@ -64,18 +30,6 @@ export const webpackConfig = ({ config, env }) => {
     }
   };
   return smart(config,addConfig); 
-  // config.resolve.extensions = config.resolve.extensions.concat(
-  //   addConfig.resolve.extensions
-  // );
-  // config.resolve.alias = config.resolve.alias || {};
-  // Object.keys(addConfig.resolve.alias).forEach(key => {
-  //   config.resolve.alias[key] = addConfig.resolve.alias[key];
-  // });
-  // config.resolve.modules = config.resolve.modules
-  //   ? config.resolve.modules.concat(addConfig.resolve.modules)
-  //   : addConfig.resolve.modules;
-  // config.module.rules = config.module.rules.concat(addConfig.module.rules);
-  // config.resolveLoader = addConfig.resolveLoader;
 };
 
 export default makeConfig({
