@@ -53,3 +53,7 @@ npx detox text;
 ```shell
 yarn storybook; 
 ```
+
+# screens
+
+screens must be routed with react-navigation
