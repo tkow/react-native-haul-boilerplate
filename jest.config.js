@@ -10,7 +10,6 @@ module.exports = {
   "testMatch":null,
   "transform": {
     ...tsjPreset.transform,
-    "^.+\\.jsx?$": '<rootDir>/node_modules/react-native/jest/preprocessor.js',
   },
   "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   "cacheDirectory": ".jest/cache",
@@ -36,6 +35,5 @@ module.exports = {
     }
   },
   "setupFiles": [
-  ],
-  "cacheDirectory": '.jest/cache',
+  ]
 }
